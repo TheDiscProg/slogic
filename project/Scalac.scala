@@ -10,7 +10,6 @@ object Scalac {
     "-language:higherKinds", // Allow higher-kinded types
     "-language:implicitConversions", // Allow definition of implicit functions called views
     "-unchecked", // Enable additional warnings where generated code depends on assumptions.
-    "-Wsafe-init", // Wrap field accessors to throw an exception on uninitialized access.
     "-Wunused:implicits", // Warn if an implicit parameter is unused.
     "-Wunused:imports", // Warn if an import selector is not referenced.
     "-Wunused:locals", // Warn if a local definition is unused.
