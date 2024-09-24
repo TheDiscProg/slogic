@@ -8,7 +8,10 @@ ThisBuild / version := "0.2.0"
 
 lazy val commonSettings = Seq(
   scalaVersion := scala3,
-  libraryDependencies ++= Dependencies.all
+  libraryDependencies ++= Dependencies.all,
+  addCompilerPlugin(
+    ("org.typelevel" %% "kind-projector" % "0.13.2").cross(CrossVersion.full)
+  )
 )
 
 lazy val root = (project in file("."))
