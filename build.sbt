@@ -10,7 +10,7 @@ lazy val commonSettings = Seq(
   scalaVersion := scala3,
   libraryDependencies ++= Dependencies.all,
   addCompilerPlugin(
-    ("org.typelevel" %% "kind-projector" % "0.13.2").cross(CrossVersion.full)
+    ("org.typelevel" %% "kind-projector" % "0.13.2").cross(CrossVersion.for3Use2_13)
   )
 )
 
