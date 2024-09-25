@@ -9,9 +9,6 @@ ThisBuild / version := "0.2.0"
 lazy val commonSettings = Seq(
   scalaVersion := scala3,
   libraryDependencies ++= Dependencies.all,
-  addCompilerPlugin(
-    ("org.typelevel" %% "kind-projector" % "0.13.2").cross(CrossVersion.for3Use2_13)
-  )
 )
 
 lazy val root = (project in file("."))
@@ -28,5 +25,6 @@ lazy val root = (project in file("."))
 githubOwner := "TheDiscProg"
 githubRepository := "slogic"
 
+// scalafmt will make changes in Xor.scala that breaks the code
 addCommandAlias("cleanTest", ";clean;scalafmt;test:scalafmt;test;")
 addCommandAlias("cleanCoverage", ";clean;scalafmt;test:scalafmt;coverage;test;coverageReport;")

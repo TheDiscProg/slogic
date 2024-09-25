@@ -1,4 +1,4 @@
-package thediscprog.slogic
+package net.simexapi.slogic
 
 trait Xor[A, B] {
 

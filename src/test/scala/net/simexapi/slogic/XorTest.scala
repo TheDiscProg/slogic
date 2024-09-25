@@ -1,4 +1,4 @@
-package thediscprog.slogic
+package net.simexapi.slogic
 
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
