@@ -14,8 +14,6 @@ object Scalac {
     "-Wunused:imports", // Warn if an import selector is not referenced.
     "-Wunused:locals", // Warn if a local definition is unused.
     "-Wunused:params", // Warn if a value parameter is unused.
-    "-Wunused:privates", // Warn if a private member is unused.
-    "-source:3.0-migration",
-    "-Xkind-projector"
+    "-Wunused:privates" // Warn if a private member is unused
   )
 }
