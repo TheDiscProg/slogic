@@ -17,7 +17,8 @@ lazy val root = (project in file("."))
     commonSettings,
     name := "slogic",
     scalacOptions ++= Scalac.options,
-    crossScalaVersions := supportedScalaVersions
+    crossScalaVersions := supportedScalaVersions,
+    publishTo := sonatypePublishToBundle.value
   )
 
 // scalafmt will make changes in Xor.scala that breaks the code
