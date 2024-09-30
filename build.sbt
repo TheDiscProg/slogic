@@ -42,5 +42,4 @@ inThisBuild(
 )
 
 ThisBuild / sonatypeCredentialHost := sonatypeCentralHost
-sonatypeRepository := "https://s01.oss.sonatype.org/service/local"
-publishTo := sonatypePublishToBundle.value
+
