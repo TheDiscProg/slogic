@@ -1,11 +1,12 @@
 import xerial.sbt.Sonatype._
 
-lazy val scala2 = "2.13.14"
-lazy val scala3 = "3.5.1"
-lazy val supportedScalaVersions = List(scala2, scala3)
+lazy val scala2 = "2.13.18"
+lazy val scala33 = "3.3.7"
+lazy val scala37 = "3.7.3"
+lazy val supportedScalaVersions = List(scala2, scala33,scala37)
 
 lazy val commonSettings = Seq(
-  scalaVersion := scala3,
+  scalaVersion := scala37,
   libraryDependencies ++= Dependencies.all
 )
 
@@ -19,7 +20,7 @@ lazy val root = (project in file("."))
     scalacOptions ++= Scalac.options,
     crossScalaVersions := supportedScalaVersions
   )
-ThisBuild / version := "0.3.1"
+ThisBuild / version := "0.3.2"
 ThisBuild / organization := "io.github.thediscprog"
 ThisBuild / organizationName := "thediscprog"
 ThisBuild / organizationHomepage := Some(url("https://github.com/TheDiscProg"))
@@ -32,7 +33,7 @@ ThisBuild / sonatypeCredentialHost := sonatypeCentralHost
 ThisBuild / publishTo := sonatypePublishToBundle.value
 ThisBuild / sonatypeProfileName := "io.github.thediscprog"
 ThisBuild / publishMavenStyle := true
-ThisBuild / licenses := List("GNU-3.0" -> url("https://www.gnu.org/licenses/gpl-3.0.en.html"))
+ThisBuild / licenses := List("Apache-2.0" -> url("https://www.apache.org/licenses/LICENSE-2.0"))
 ThisBuild / homepage := Some(url("https://github.com/thediscprog/slogic"))
 ThisBuild / sonatypeProjectHosting := Some(GitHubHosting("TheDiscProg", "slogic", "TheDiscProg@gmail.com"))
 ThisBuild / scmInfo := Some(
