@@ -21,7 +21,7 @@ lazy val root = (project in file("."))
     scalacOptions ++= Scalac.options,
     crossScalaVersions := supportedScalaVersions
   )
-ThisBuild / version := "0.3.3"
+ThisBuild / version := "0.3.3.1"
 ThisBuild / organization := "io.github.thediscprog"
 ThisBuild / organizationName := "thediscprog"
 ThisBuild / organizationHomepage := Some(url("https://github.com/TheDiscProg"))
