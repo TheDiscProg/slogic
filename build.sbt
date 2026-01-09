@@ -2,8 +2,9 @@ import xerial.sbt.Sonatype._
 
 lazy val scala2 = "2.13.18"
 lazy val scala33 = "3.3.7"
+lazy val scala35 = "3.5.2"
 lazy val scala37 = "3.7.3"
-lazy val supportedScalaVersions = List(scala2, scala33,scala37)
+lazy val supportedScalaVersions = List(scala2, scala33,scala35, scala37)
 
 lazy val commonSettings = Seq(
   scalaVersion := scala37,
@@ -20,7 +21,7 @@ lazy val root = (project in file("."))
     scalacOptions ++= Scalac.options,
     crossScalaVersions := supportedScalaVersions
   )
-ThisBuild / version := "0.3.2"
+ThisBuild / version := "0.3.3"
 ThisBuild / organization := "io.github.thediscprog"
 ThisBuild / organizationName := "thediscprog"
 ThisBuild / organizationHomepage := Some(url("https://github.com/TheDiscProg"))
